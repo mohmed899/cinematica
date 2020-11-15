@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".UI.CinemaDetails">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Cinema Info"
+        app:titleTextColor="#FFF" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cinema_img_detail"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="8dp"
+        app:civ_border_color="#FFFEFE"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/img_3d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/cinema_img_detail"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:srcCompat="@drawable/ic_3d" />
+
+    <TextView
+        android:id="@+id/cinema_name_detail"
+        style="@style/MainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_below="@id/cinema_img_detail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cinema_img_detail"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/money_info"
+        style="@style/Movie_diss_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentEnd="true"
+        android:text="@string/time_and_price_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cinema_name_detail" />
+
+    <LinearLayout
+        android:id="@+id/Lineer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/money_info">
+
+        <TextView
+            android:id="@+id/money_tv"
+            style="@style/Movie_language_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/price_borber"
+            android:padding="8dp"
+            tools:text="100L.E" />
+
+        <TextView
+            android:id="@+id/time_tv1"
+            style="@style/Movie_time_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/time_border"
+            android:padding="8dp"
+            tools:text="24:00" />
+
+        <TextView
+            android:id="@+id/time_tv2"
+            style="@style/Movie_time_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/time_border"
+            android:padding="8dp"
+            tools:text="24:00" />
+
+        <TextView
+            android:id="@+id/time_tv3"
+            style="@style/Movie_time_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/time_border"
+            android:padding="8dp"
+            tools:text="24:00" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Movie_diss_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginEnd="183dp"
+        android:text="@string/address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lineer"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="Omar Ibn El Khattab St., Heliopolis, Cairo, Cairo Governorate sadaafaw" />
+
+    <RelativeLayout
+        android:id="@+id/btn_holder"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            style="@style/MainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            tools:text="Play now " />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/favo_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/loca_btn"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_not_selected_favorite_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/loca_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/floatingActionButton8"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_location" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+
+            app:srcCompat="@drawable/ic_call" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#AD252C51"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_holder" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
